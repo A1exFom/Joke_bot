@@ -1,6 +1,9 @@
 import discord
 import random
-print(random.randint(0,5))
+a=['f','g']
+b=random.choice(a)
+print(b)
+
 from discord.ext import commands
 bot = commands.Bot(command_prefix='!')
 @bot.command()
@@ -78,8 +81,10 @@ async def hex_to_dec(ctx, arg2):
     await ctx.send(str(g))
 @bot.command()
 async def joke(ctx):
-    joke_store = ['Чем больше должен, тем хуже память.', 'Купил самоклеящиеся обои. Сижу. Жду.',
-                  'Плох тот таксист, который выбирает короткий маршрут.', 'https://clck.ru/ZPGLN',
+    joke_store = ['Чем больше должен, тем хуже память.',
+                  'Купил самоклеящиеся обои. Сижу. Жду.',
+                  'Плох тот таксист, который выбирает короткий маршрут.',
+                  'https://clck.ru/ZPGLN',
                   'Так приятно себе ни в чём не отказывать целый день после зарплаты.',
                   'Каждый думает, что он незаменим, пока он не заменён.']
     joke_1= random.choice(joke_store)
@@ -90,8 +95,11 @@ async def best_game(ctx):
 @bot.command()
 async def start_game_party(ctx, *, arg):
     await ctx.send ('@here'+arg)
+@bot.command()
+async def attention(ctx, *, arg):
+    await ctx.send ('@everyone'+arg)
 
-bot.run('OTIxMjI1MzM4OTg0NDc2Nzc1.Ybvz9A.BuJpm9UpbGkBH1kjdvFSw1sv4Yw')
+bot.run('OTIxMjI1MzM4OTg0NDc2Nzc1.Ybvz9A.x0fEP6nXs1i9VUpxlZY9bALEFgM')
 
 # import discord
 # import random
