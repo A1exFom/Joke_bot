@@ -3,7 +3,7 @@ import random
 
 from discord.ext import commands
 bot = commands.Bot(command_prefix='!')
-'''Указываем префикс команды. Он позволит отличать обычный текст от команды для бота'''
+'''Указываем префикс команды. Он позволит отличать обычный текст от команды для нашего бота'''
 @bot.command()
 async def about(ctx):
     await ctx.send('Joy_bot для Discord сервера. \nДанный бот содержит в себе как развлекательные функции, так и полезные для обучения.\nПодробнее все команды можно найти в !help')
@@ -134,26 +134,6 @@ bot.run('OTIxMjI1MzM4OTg0NDc2Nzc1.Ybvz9A.UAKvST6l7g4YdEGayRYrRiCBwV8')
 #     async def on_message(self, message):
 #         if message.author == self.user:
 #             return
-#
-#         if message.content.endswith('подбрось монетку') or message.content == ('!coin') :
-#             coin_pot = ['орел', 'решка', 'орел', 'решка', 'неудачно, монетка укатилась']
-#             coin = random.choice(coin_pot)
-#             if coin == 'орел':
-#                 coin= 'выпал ' + coin
-#             elif coin == 'решка':
-#                 coin= 'выпала ' + coin
-#             await message.channel.send( str(coin))
-#         if message.content == ('!cat') :
-#             cat_pictures = ['https://clck.ru/ZP9TQ', 'https://clck.ru/ZP9Tk', 'https://clck.ru/ZP9UZ', 'https://clck.ru/ZP9V4', 'https://clck.ru/ZP9X6', 'https://clck.ru/ZP9Yy']
-#             cat = random.choice(cat_pictures)
-#             await message.channel.send( str(cat))
-#
-#         if message.content == ('!random') or message.content.endswith('назови случайное число'):
-#             await message.channel.send('Укажите промежуток (<50 to 100>)')
-#         if message.content.startswith('<10 to 100>'):
-#             random_res = random.randint(0, 100)
-#             await message.channel.send(str(random_res))
-#
 #     async def on_raw_reaction_add(self, payload):
 #         if payload.message_id == 921580091740418109:
 #             channel = self.get_channel(payload.channel_id)  # получаем объект канала
@@ -174,31 +154,3 @@ bot.run('OTIxMjI1MzM4OTg0NDc2Nzc1.Ybvz9A.UAKvST6l7g4YdEGayRYrRiCBwV8')
 #                 print('[ERROR] KeyError, no role found for ' + emoji)
 #             except Exception as e:
 #                 print(repr(e))
-#
-#
-# client = MyClient()
-# client.run('OTIxMjI1MzM4OTg0NDc2Nzc1.Ybvz9A.BuJpm9UpbGkBH1kjdvFSw1sv4Yw')
-# import discord
-# import random
-#
-# from discord.ext import commands
-# bot = commands.Bot(command_prefix='!')
-# @bot.command()
-# async def ping(ctx):
-#     await ctx.send('pong')
-# @bot.command()
-# async def cat(ctx):
-#     cat_pictures = ['https://clck.ru/ZP9TQ', 'https://clck.ru/ZP9Tk', 'https://clck.ru/ZP9UZ', 'https://clck.ru/ZP9V4', 'https://clck.ru/ZP9X6', 'https://clck.ru/ZP9Yy']
-#     cat_1 = random.choice(cat_pictures)
-#     await ctx.send(str(cat_1))
-#
-# @bot.command()
-# async def coin(ctx):
-#     coin_pot = ['орел', 'решка', 'орел', 'решка', 'неудачно, монетка укатилась']
-#     coin = random.choice(coin_pot)
-#     if coin == 'орел':
-#         coin = 'выпал ' + coin
-#     elif coin == 'решка':
-#         coin= 'выпала ' + coin
-#     await ctx.send(str(coin))
-# bot.run('OTIxMjI1MzM4OTg0NDc2Nzc1.Ybvz9A.BuJpm9UpbGkBH1kjdvFSw1sv4Yw')
