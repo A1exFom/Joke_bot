@@ -163,7 +163,7 @@ bot.run('OTIxMjI1MzM4OTg0NDc2Nzc1.Ybvz9A.x0fEP6nXs1i9VUpxlZY9bALEFgM')
 #
 # client = MyClient()
 # client.run('OTIxMjI1MzM4OTg0NDc2Nzc1.Ybvz9A.BuJpm9UpbGkBH1kjdvFSw1sv4Yw')
-import discord
+# import discord
 # import random
 #
 # from discord.ext import commands
